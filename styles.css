@@ -208,15 +208,16 @@ ol li {
     margin-top: 18px;
 }
 
-#hamburger p {
+#hamburger #menu_text {
     font-size: 20px;
     font-family: 'Bebas Neue', cursive;
     color: #EB5428;
     padding: 0px;
-    margin: -4px 0px 0px 4px;
+    position: absolute;
+    margin: 45px 0px 0px -35px;
 }
 
-#hamburger:hover {
+nav label span:hover {
     text-decoration: underline;
     text-decoration-color: #EB5428;
 }
@@ -226,6 +227,7 @@ ul {
     max-height: 0;
     transition: max-height .2s ease-out;
     background-color: #7ABFBF;
+    margin-top: 30px;
 }
 
 label {
@@ -235,10 +237,10 @@ label {
     user-select: none;
 }
 
-label span:before {
+label .navicon:before {
     top: 5px;
 }
-label span:after {
+label .navicon:after {
     top: -5px;
 }
 input {
@@ -261,16 +263,16 @@ input:checked~ul::-webkit-scrollbar-thumb {
     background-color: #EB5428;
 }
 
-input:checked ~ label span {
+input:checked ~ label .navicon {
     background: transparent;
 }
-input:checked ~ label span:before {
+input:checked ~ label .navicon:before {
     transform: rotate(-45deg);
 }
-input:checked ~ label span:after {
+input:checked ~ label .navicon:after {
     transform: rotate(45deg);
 }
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+input:checked ~ label:not(.steps) .navicon:before, input:checked ~ label:not(.steps) .navicon:after {
     top: 0;
 }
 /* end menu content*/
